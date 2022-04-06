@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anas.com</title>
+    <link rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/ogw/ADea4I6bkHLF9WrmnAIrDT7nWl3BZqa1I1z3y0BGQjuOzbM=s83-c-mo">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;800&family=Josefin+Sans:wght@200;700&family=Montserrat:wght@200&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+   
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+ 
+
+    <!-- <style>
+.circular_anas {
+	width: 100px;
+    height: 100px;
+    /* margin: 4em auto 0; */
+    color: #e1e1e1;
+    position: absolute;
+    /* left: 46.5%;
+    top: 64.75%; */
+    right: -3px;
+    top: -2px;
+}
+
+.circular_anas svg {
+	display: block;
+	overflow: visible;
+	transition: 10s linear transform;
+}
+
+.circular_anas text { fill: currentColor }
+.circular_anas path { fill: none; }
+
+    </style> -->
+  
+ <style>
+
+
+     /* cube start */
+     .cube{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg);
+            animation: animate 4s linear infinite;
+            left: 10%;
+            top: 70px;
+
+        }
+
+        @keyframes animate{
+            0%{
+                transform: rotateX(-30deg) rotateY(0deg);
+            }
+            100%{
+                transform: rotateX(-30deg) rotateY(360deg);
+            }
+        }
+            .cube div{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;}
+                
+                .cube div span{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(#151515,#6c6c6c);
+                    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transform-style: preserve-3d;
+                }
+                
+                .cube div span h3{
+                    position: absolute;
+                    font-size: 32px;
+                    color: #fff;
+                    transform: translateZ(50px);
+                }
+                .cube div span .cube-text{
+                    position: absolute;
+                    font-size: 25px;
+                    color: #fff;
+                    transform: translateZ(50px);
+
+                }
+                .cube div span h3:nth-child(1){
+                    transform: translateZ(0) translateY(20px);
+                    color: rgba(0,0,0,0.1);
+                    filter: blur(2px);
+                }
+                .top{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 300px;
+                    height: 300px;
+                    background: #222;
+                    transform: rotateX(90deg) translateZ(150px);
+                }
+                .top::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 300px;
+                    height: 300px;
+                    background: #303030;
+                    transform: translateZ(-380px);
+                    filter: blur(20px);
+                    box-shadow: 0 0 120px rgba(0,255,0,0.2),
+                    0 0 200px rgba(0,255,0,0.4),
+                    0 0 300px rgba(0,255,0,0.6),
+                    0 0 400px rgba(0,255,0,0.8)
+                    0 0 500px rgba(0,255,0,1);
+                }
+                .cube:hover{
+                    /* font-size: 12px; */
+                    -webkit-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+  -o-animation-play-state:paused;
+  animation-play-state:paused;
+  cursor: pointer;
+                }
+     /* cube end */
+     .loading {
+	 display: flex;
+     position: relative;
+    bottom: -30px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+ .loading .dot {
+	 position: relative;
+	 width: 2em;
+	 height: 2em;
+	 margin: 0.8em;
+	 border-radius: 50%;
+}
+ .loading .dot::before {
+	 position: absolute;
+	 content: "";
+	 width: 100%;
+	 height: 100%;
+	 background: inherit;
+	 border-radius: inherit;
+	 animation: wave 2s ease-out infinite;
+}
+ .loading .dot:nth-child(1) {
+	 background: #7ef9ff;
+}
+ .loading .dot:nth-child(1)::before {
+	 animation-delay: 0.2s;
+}
+ .loading .dot:nth-child(2) {
+	 background: #89cff0;
+}
+ .loading .dot:nth-child(2)::before {
+	 animation-delay: 0.4s;
+}
+ .loading .dot:nth-child(3) {
+	 background: #4682b4;
+}
+ .loading .dot:nth-child(3)::before {
+	 animation-delay: 0.6s;
+}
+ .loading .dot:nth-child(4) {
+	 background: #0f52ba;
+}
+ .loading .dot:nth-child(4)::before {
+	 animation-delay: 0.8s;
+}
+ .loading .dot:nth-child(5) {
+	 background: #000080;
+}
+ .loading .dot:nth-child(5)::before {
+	 animation-delay: 1s;
+}
+ @keyframes wave {
+	 50%, 75% {
+		 transform: scale(2.5);
+	}
+	 80%, 100% {
+		 opacity: 0;
+	}
+}
+ 
+
+
+
+
+     /* progress bar style start */
+     /* Start My Skills */
+
+     .blue .progress-bar ,.blue span ,.blue span:after{
+    background-color: #65696c
+}
+.red .progress-bar ,.red span ,.red span:after{
+    background-color: #414c46
+}
+.green .progress-bar ,.green span ,.green span:after{
+    background-color: #28322c
+}
+.carrot .progress-bar ,.carrot span ,.carrot span:after{
+    background-color: #28322c
+}
+.sun .progress-bar ,.sun span ,.sun span:after{
+    background-color: #65696c
+}
+
+/*=================================*/
+
+.skills{
+    width: 700px;
+    background-color: #000;
+    /* border: 1px solid #ddd; */
+    margin: 30px auto;
+    padding: 10px;
+    position: relative
+}
+.skills:before ,.skills:after{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg)
+}
+.skills:after{
+   -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto
+}
+.skills h3{
+    font-weight: 300;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+    color: #737373;
+    margin: 0px;
+    font-size: 35px
+}
+.skills p{
+    font-size: 16px;
+    margin-bottom: 8px
+}
+.skills .progress{
+    width: 100%;
+    height: 20px;
+    border: 1px solid #CCC;
+    position: relative;
+    margin-bottom: 30px
+}
+.skills .progress .progress-bar{
+    width: 0;
+    height: 100%
+}
+.skills .progress .progress-bar span{
+    top: -30px;
+    margin-left: -22px;
+    left: 0;
+    position: absolute;
+    color: #fff;
+    border-radius: 2px;
+    padding: 4px 10px;
+    font-size: 12px
+}
+.skills .progress .progress-bar span:after{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -4px;
+    transform: rotate(45deg)
+}
+
+/* End My Skills */
+     /* progress bar style end */
+
+     /* preloder section start */
+    #prelod{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: #111;
+    position: fixed;
+    z-index: 100;
+    }
+    
+    .circle{
+  position:relative;
+  width:200px;
+  height:200px;
+  border-radius:50%;
+/*   background: #ccc; */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.logo{
+  position:absolute;
+  width:150px;
+  height:150px;
+  background: url(./images/anasog.png);
+  background-size:cover;
+  border-radius:50%;
+  /* filter: brightness(1.5).contrast(1.5); */
+}
+
+.text {
+  position: absolute;
+  width:100%;
+  height:100%;
+  animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+  0%{
+    transform:rotate(0eg);
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.text span{
+    position: absolute;
+    left: 50%;
+    font-size: 14px;
+    transform-origin: 0 100px;
+    line-height: 31px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+   
+     /* preloder section end */
+
+ </style>
+
+</head>
+<body>
+
+    <div id="prelod">
+        <!-- preloder start -->
+        <div class="circle">
+           <div class="logo"></div>
+           <div class="text">
+             <p>Muhammed Anas -</p>
+           </div>
+         </div>
+   <!-- preloder end -->
+        </div>
+
+    <div id="mouse-circle"></div>
+    <header id="base-1">
+        <div class="container">
+            <img class="animate-banner img-fluid" src="./images/b4-dot-6.png" alt="" >  
+            <div id="anas-text-3" class="line"></div>
+            <div class="banner-text">
+            <h2 id="anas-text" class="text-center text-h2">Anas</h2>
+            <h4 id="anas-text-2" class="text-center text-h4">Creative Web Designer & Developer</h4>
+        </div>
+
+        <div id="anas-text-4" class="anas-text ">
+            <a class="text-center text-light downl-btn " href="./images/cv anas.pdf" title="" download>DOWNLOAD CV</a>
+        </div>
+        </div>
+        <!-- text curve start -->
+        
+        <!-- text curve end -->
+        <div class="mouse-main">
+        <div class="mouse">
+            <div class="circular_anas">
+                Anas mkz
+            </div>
+            <!-- <i class="fab fa-whatsapp fa-5x"></i> -->
+            <i class="fal fa-mouse-alt fa-5x"></i>
+           
+            <a href="#base-3"><img class="mouse-img" src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/40/000000/external-mouse-internet-of-things-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"/></a>
+        </div>
+    </div>
+    
+    <div class="fade-bottom"></div>
+   
+    </header>
+    <div class="image-square">
+        <div class="img-squr">
+            <div class="circular_anasf">
+                Anas mkz
+            </div>
+            <img src="./images/logom.jpg" alt="" class="img-fluid square-image">
+        </div>
+    </div>
+    <section id="base-3">
+
+        <div class="container">
+            <h2 class="text-center about-h2">About Us</h2>
+            
+            <div class="line" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"></div>
+            <div class="row mt-5">
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                  <!-- <div class="about-image">
+                      <img src="./images/anas.jpg.JPG" alt="" class="img-fluid">
+                  </div> -->
+                  <div class="bg ani-grow">
+                    <img src="./images/anas.png" alt="" class="img-fluid imagi" data-aos="fade-right" data-aos-duration="3000">
+                    <div class="overlay">
+                      <h2 class="overh2">Muhammed Anas</h2>
+                      <!-- <p class="overp">CEO MENTEGOZ</p> -->
+                    </div>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="about-text">
+                    <h2 class="text-center about-text-h2" data-aos="fade-left" data-aos-duration="3000">I'M MUHAMMED ANAS</h2>
+                    <P class="about-text-p" data-aos="fade-left" data-aos-duration="3000">I develop front end for a previous year's hands-on experience. I'm proficient in HTML5, CSS3, javascript, jQuery, bootstrap, and other technologies. I'm very passionate about web development and design in all of its forms, as well as assisting small businesses and artisans in developing and improving their online presence. </P>
+                    <a href="tel:+9645016304" class="contact-btn" data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="300"
+                    data-aos-offset="0">Contact Me</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- <div class="scrolls">  <a href="#"> <i class="fas fa-chevron-up fa-3x text-light base-3-i"></i></a></div> -->
+        <a href="#" class="back-to-top">Top</a>
+    </section>
+    <section id="base-4">
+        <div class="container">
+            <h2 class="text-center text-uppercase base4-text" data-aos="fade-right" data-aos-duration="3000">professional skills</h2>
+            <div class="row">
+            <!-- Start My Skills -->
+        
+        <section class="skills"data-aos="fade-up"
+        data-aos-duration="3000">
+             
+            <!-- <h3>Skills</h3> -->
+            <div class="cont" data-percent="75%">
+                <p class="text-light">HTML & HTML5</p>
+                <div class="progress blue">
+                    <div class="progress-bar"><span>75%</span></div>
+                </div>
+            </div>
+            
+            <div class="cont" data-percent="60%">
+                <p class="text-light">CSS & CSS3</p>
+                <div class="progress green">
+                    <div class="progress-bar"><span>60%</span></div>
+                </div>
+            </div>
+            
+            <div class="cont" data-percent="90%">
+                <p class="text-light">BOOTSTRAP</p>
+                <div class="progress blue">
+                    <div class="progress-bar"><span>90%</span></div>
+                </div>
+            </div>
+            
+            <div class="cont" data-percent="45%">
+                <p class="text-light">PYTHON & MYSQL</p>
+                <div class="progress carrot">
+                    <div class="progress-bar"><span>45%</span></div>
+                </div>
+            </div>
+            
+            <div class="cont" data-percent="25%">
+                <p class="text-light">JS</p>
+                <div class="progress sun">
+                    <div class="progress-bar"><span>25%</span></div>
+                </div>
+            </div>
+            
+        </section>
+        
+        <!-- End My Skills -->
+            </div>
+        </div>
+
+    </section>
+
+    <section id="base-2">
+        <img src="./images/light-dotz.png" alt="" class="img-fluid dots"> 
+        <div class="container base-2-con">
+        <div class="base-text">
+       <h4 class="text-center  text-light"  data-aos="fade-right" data-aos-duration="3000">Explore Works</h4>
+       <h2 class="text-center text-light base-2-text-h2" data-aos="fade-left" data-aos-duration="3000">Some Recent Projects !</h2>
+   </div>
+   <div class="row works-rows">
+       <div class="col-6 col-md-3">
+           <a href="https://netflixanas.netlify.app">
+           <div class="card" data-aos="fade-up"
+           data-aos-duration="3000">
+                   <img src="./images/netflix.jpg.jpg" alt="" class="img-fluid works">
+                   <div class="card-body">
+                       <div class="card-title">Netflix</div>
+                   </div>
+               </div>
+            </a>
+           </div>
+           <div class="col-6 col-md-3">
+               <a href="https://demo-web-anas.netlify.app">
+            <div class="card" data-aos="fade-up"
+            data-aos-duration="3000">
+                    <img src="./images/login.jpg" alt="" class="img-fluid works">
+                    <div class="card-body">
+                        <div class="card-title">Demo Web</div>
+                    </div>
+                </div>
+            </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="https://mentegoz.netlify.app">
+                <div class="card cards" data-aos="fade-up"
+                data-aos-duration="3000">
+                        <img src="./images/mentegoz.jpg" alt="" class="img-fluid works-space">
+                        <div class="card-body">
+                            <div class="card-title">Mentegoz</div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="col-6 col-md-3">
+                    <a href="https://minionsdemo.netlify.app">
+                    <div class="card cards" data-aos="fade-up"
+                    data-aos-duration="3000">
+                            <img src="./images/minions.jpg.jpg" alt="" class="img-fluid works">
+                            <div class="card-body">
+                                <div class="card-title">Minions</div>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+       </div>
+       <!-- <p class="text-light">muhammed anas</p> -->
+      
+   </div>
+  
+  
+   <img src="./images/light-dotz.png" alt="" class="img-fluid dots-2">
+   <!-- new bubles -->
+   <div class="bottom-particles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <!-- <div class="bubble"></div>
+    <div class="bubble"></div> -->
+    <div class="bubble"></div>
+  </div>
+   <!-- new bubles -->
+    </section>
+
+    <section id="base-5">
+        <!-- <img class="animate-banner img-fluid" src="./images/b4-dot-6.png" alt="" > -->
+        <!-- <h3 class="text-center base5-h3"  data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">Portfolio Photography</h3>
+        <div class="owl-carousel owl-theme mt-5">
+            <div class="item">
+                <div class="image-cards" data-tilt>
+                    <img src="./images/anasog.png" alt="" class="image-base5">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-cards" data-tilt>
+                    <div class="card-images">
+                    <img src="./images/anasdemo.png" alt="" class="image-base5">
+                </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-cards" data-tilt>
+                    <img src="./images/anasog1.jpeg" alt="" class="image-base5">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-cards" data-tilt>
+                    <img src="./images/anasog7.jpeg" alt="" class="image-base5">
+                </div>
+            </div>
+            <div class="item">
+                <div class="image-cards" data-tilt>
+                    <img src="./images/anasog3.jpeg" alt="" class="image-base5">
+                </div>
+            </div>
+            <div class="item"><div class="image-cards" data-tilt>
+                <img src="./images/anasog5.jpeg" alt="" class="image-base5">
+            </div></div>
+          
+            
+        </div> -->
+
+        <!-- <div class="loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div> -->
+          <!-- video section -->
+          <!-- <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-6">
+              <div class="our-story-card-img-container">
+                <div class="our-story-card-animation-container">
+                  <img class="our-story-card-img" src="./images/tv.png" alt="">
+                  <div class="our-story-card-animation">
+                    <video loop muted autoplay preload="auto" class="our-story-card-video" src="./images/new-videos.mp4" type="video/mp4" style="max-width: 100%;"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis officia sit magni aliquam voluptas laudantium, blanditiis consequuntur atque harum maxime eaque laboriosam ullam! Nesciunt, magnam? At quae obcaecati molestias dolorem.
+                  Itaque sit ea voluptas debitis dolor repellat velit commodi cum laudantium. Natus accusantium quod omnis illum necessitatibus porro recusandae hic dolore, tempore incidunt ducimus animi explicabo expedita libero ea! Facere.
+                  Ab voluptas esse voluptatibus sequi modi, corporis aspernatur voluptatem officia atque repellendus facere libero, animi suscipit maxime exercitationem nisi excepturi ad harum aliquam dolorum. Exercitationem quod molestiae ratione repellat odit!
+                  Iste, minus harum molestiae obcaecati doloribus eum commodi sapiente tempora facere vitae quo placeat atque cupiditate veniam maxime! Quam id enim nemo ullam tempore assumenda voluptatem deserunt possimus quae ipsam!
+                  Exercitationem ipsum recusandae pariatur, aliquam hic, accusamus maxime voluptas eum quo vel dolore! Aspernatur nihil sed excepturi esse nostrum ipsa provident earum eveniet dolores voluptates amet, temporibus iure est dolore?</p>
+              </div>
+            </div>
+            
+            </div>
+          </div> -->
+          <!-- video section -->
+
+
+
+
+          <!-- original sec -->
+     <div class="container">
+         <div class="row">
+             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <lottie-player class="lottie" src="https://assets10.lottiefiles.com/packages/lf20_s8vaup6j.json"  background="#000000"  speed="1" loop  autoplay data-aos="fade-up"
+                data-aos-duration="3000"></lottie-player>
+             </div>
+             <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="web-text">
+                    <h2 class="web-h2" data-aos="fade-left" data-aos-duration="3000">WHO I'M</h2>
+                    <div class="web-line" data-aos="fade-zoom-in"
+                    data-aos-easing="ease-in-back"
+                    data-aos-delay="300"
+                    data-aos-offset="0"></div>
+                    <p class="web-p" data-aos="fade-left" data-aos-duration="3000">My role is to make work the visual element of an app or website, working with UI and UX designers. As we said before, designers take care of the aesthetic and creative aspects of the interface, while developers focus on making these visual elements function smoothly and coherently.
+Front-end development is the technical implementation of the software's user interface (UI). UI design is the graphical bridge that connects the two. Having these three areas working together seamlessly is the key to happy users and happy upper management alike
+                    </p>
+                </div>
+             </div>
+         </div>
+     </div>     
+
+          <!-- original sec -->
+    </section>
+    <!-- <button id="btn-clicked" onclick="play()">click me</button> -->
+
+    <footer>
+      
+        <div class="container">
+            <h2 class="contact-h2 text-center" data-aos="fade-left" data-aos-duration="3000">Contact Me</h2>
+            <div class="contact-line" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0"></div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-lg-6">
+                    <div class="contact-form">
+                        
+                        <!-- <i class="fas fa-mobile-alt fa-2x"><a href="tel:9645016304">9645016304</a></i><br>
+                        <i class="fas fa-map-marker fa-2x ">Malappuram, Kavanoor, 673641</i><br>
+                        <i class="fas fa-envelope fa-2x"><a href="mailto:anasmanasm459@gmail.com">anasmanasm459@gmail.com</a></i> -->
+                            <!-- <img src="./images/logom.jpg" alt="" class="img-fluid " data-tilt> -->
+                            <div class="cube">
+                                <div class="top"></div>
+                                <div>
+                                    <span style="--i:0;">
+                                      <h3> <i class="fas fa-mobile-alt fa-5x"></i></h3> 
+                                        <h3>9645016304</h3>
+                                    </span>
+                                    <span style="--i:1;">
+                                        <h3><i class="fas fa-map-marker fa-5x"></i></h3>
+                                        <h3 class="cube-text">Kerala,Malappuram</h3>
+                                    </span>
+                                    <span style="--i:2;">
+                                       <h3><i class="fab fa-instagram fa-5x"></i></h3> 
+                                        <h3>@anas_mkz</h3>
+                                    </span>
+                                    <span style="--i:3;">
+                                       <h3><i class="fab fa-linkedin fa-5x"></i></h3> 
+                                        <h3>Anas m</h3>
+                                    </span>
+                                   
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-lg-6">
+                    <div class="right-section" data-aos="flip-left"
+                    data-aos-easing="ease-out-cubic"
+                    data-aos-duration="2000">
+                        <h4>Please fill the form</h4>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" id="name" required>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="text" required>
+                                <label for="password">Message</label>
+                            
+                            </div>
+                            <div class="submit-section">
+                                <input type="submit" class="submit-button">
+                            </div>
+                        </form>
+    
+                    </div>
+                </div>
+            </div>
+           
+            </div>
+       
+       
+
+    </footer>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fJEbVCrEMSE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   
+    -->
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CESDK2J7&placement=getbutterflycom" id="_carbonads_js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/mouse.js"></script>
+<!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+  </script>
+</body>
+</html>
